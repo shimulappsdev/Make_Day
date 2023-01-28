@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.EditNoteFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Edit Note"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"/>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:src="@drawable/backtool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/noteHeadingCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_12sdp"
+                android:layout_margin="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_3sdp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/noteTitleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_2sdp"
+                        app:cardCornerRadius="@dimen/_7sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Note Title / Subject"
+                                android:textSize="@dimen/_12ssp"
+                                android:textColor="@color/text_color"
+                                android:textStyle="bold"
+                                android:layout_margin="@dimen/_3sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
+
+                            <EditText
+                                android:id="@+id/editTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_margin="@dimen/_3sdp"
+                                android:background="@drawable/edit_text_back"
+                                android:fontFamily="@font/roboto"
+                                android:hint="Note title"
+                                android:textSize="@dimen/_11ssp"
+                                android:paddingHorizontal="@dimen/_7sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.571"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/title"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/noteDateCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:cardCornerRadius="@dimen/_7sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/noteTitleCard">
+                        <LinearLayout
+                            android:id="@+id/whenCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2"
+                            android:padding="@dimen/_1sdp"
+                            >
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/timeCard"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginVertical="@dimen/_2sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_7sdp"
+                                >
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/noteTime"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:fontFamily="@font/roboto"
+                                        android:text="Note Time"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_12ssp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/noteTimeInput"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/time"
+                                        android:drawablePadding="@dimen/_3sdp"
+                                        android:drawableTint="@color/text_color"
+                                        android:fontFamily="@font/roboto"
+                                        android:gravity="center_vertical"
+                                        android:padding="@dimen/_3sdp"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_11ssp"
+                                        android:hint="00 : 00 "
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/noteTime" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/dateCard"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginVertical="@dimen/_2sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_7sdp">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/noteDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:fontFamily="@font/roboto"
+                                        android:text="Note Date"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_12ssp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/noteDateInput"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/date"
+                                        android:drawablePadding="@dimen/_3sdp"
+                                        android:drawableTint="@color/text_color"
+                                        android:fontFamily="@font/roboto"
+                                        android:gravity="center_vertical"
+                                        android:padding="@dimen/_3sdp"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_11ssp"
+                                        android:hint="00 / 00 / 0000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/noteDate"
+                                        />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/noteCategoryCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        app:cardCornerRadius="@dimen/_7sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/noteDateCard"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_3sdp">
+
+                            <TextView
+                                android:id="@+id/category"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_2sdp"
+                                android:fontFamily="@font/roboto"
+                                android:includeFontPadding="false"
+                                android:text="Category"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <HorizontalScrollView
+                                android:id="@+id/radioScroll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_4sdp"
+                                app:layout_constraintBottom_toTopOf="@id/otherCateInput"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/category">
+
+                                <RadioGroup
+                                    android:id="@+id/categoryRadioGroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/everyDayBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_25sdp"
+                                        android:layout_marginRight="@dimen/_7sdp"
+                                        android:background="@drawable/btn_back"
+                                        android:backgroundTint="@color/radio_btn"
+                                        android:fontFamily="@font/roboto"
+                                        android:paddingHorizontal="@dimen/_7sdp"
+                                        android:text="Every Day"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                    <RadioButton
+                                        android:id="@+id/personalBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_25sdp"
+                                        android:layout_marginRight="@dimen/_7sdp"
+                                        android:background="@drawable/btn_back"
+                                        android:backgroundTint="@color/radio_btn"
+                                        android:fontFamily="@font/roboto"
+                                        android:paddingHorizontal="@dimen/_7sdp"
+                                        android:text="Personal"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                    <RadioButton
+                                        android:id="@+id/professionalBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_25sdp"
+                                        android:layout_marginRight="@dimen/_7sdp"
+                                        android:background="@drawable/btn_back"
+                                        android:backgroundTint="@color/radio_btn"
+                                        android:fontFamily="@font/roboto"
+                                        android:paddingHorizontal="@dimen/_7sdp"
+                                        android:text="Professional"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                    <RadioButton
+                                        android:id="@+id/travelBtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_25sdp"
+                                        android:layout_marginRight="@dimen/_7sdp"
+                                        android:background="@drawable/btn_back"
+                                        android:backgroundTint="@color/radio_btn"
+                                        android:fontFamily="@font/roboto"
+                                        android:paddingHorizontal="@dimen/_7sdp"
+                                        android:text="Travel"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                </RadioGroup>
+
+                            </HorizontalScrollView>
+
+                            <EditText
+                                android:id="@+id/otherCateInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_marginHorizontal="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_3sdp"
+                                android:background="@drawable/edit_text_back"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center_vertical"
+                                android:hint="your category"
+                                android:paddingHorizontal="@dimen/_7sdp"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_11ssp"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/radioScroll"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/noteBodyCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/noteHeadingCard"
+                app:layout_constraintBottom_toTopOf="@id/updateNoteBtn"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    >
+                    <TextView
+                        android:id="@+id/noteBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="Note Body"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_back"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/noteBody"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                            <EditText
+                                android:id="@+id/noteBodyInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/roboto"
+                                android:textSize="@dimen/_11ssp"
+                                android:textColor="@color/text_color"
+                                android:hint="Write here your note....."
+                                android:layout_margin="@dimen/_2sdp"
+                                android:gravity="start"
+                                android:backgroundTint="@color/white"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </ScrollView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/updateNoteBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Update Note"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/btn_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/noteBodyCard"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

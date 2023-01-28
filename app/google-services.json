@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "730988582156",
+    "project_id": "make-day-86220",
+    "storage_bucket": "make-day-86220.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730988582156:android:a044791c82ead904ade529",
+        "android_client_info": {
+          "package_name": "com.example.makeday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730988582156-6cmthh6lqdmnijcv1lu0sk1rl8qo08lp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB45xAoD7fuO2zgkFnKZB3hddZ4RFxGiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730988582156-6cmthh6lqdmnijcv1lu0sk1rl8qo08lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

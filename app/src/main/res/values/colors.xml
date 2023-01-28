@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="off_white">#E4E4E4</color>
+    <color name="theme_color">#6ECB63</color>
+    <color name="text_color">#595959</color>
+    <color name="green">#68ED6A</color>
+    <color name="banner_card">#7FB77E</color>
+    <color name="black_ash">#393939</color>
+    <color name="orange">#F6774F</color>
+    <color name="blue">#589DBD</color>
+    <color name="yellow">#EFC136</color>
+    <color name="lite_green">#9FC088</color>
+    <color name="radio_btn">#DAE2B6</color>
+    <color name="item_back">#A2B38B</color>
+    <color name="red">#B83434</color>
+
+<!--   card background-->
+    <color name="back1">#9EC6A5</color>
+    <color name="back2">#C4C8A0</color>
+    <color name="back3">#99C8C1</color>
+    <color name="back4">#BCA591</color>
+
+<!--    note background-->
+
+    <color name="note_back1">#83BD75</color>
+    <color name="note_back2">#F37878</color>
+    <color name="note_back3">#61876E</color>
+    <color name="note_back4">#9EA1D4</color>
+    <color name="note_back5">#86C8BC</color>
+    <color name="note_back6">#678983</color>
+    <color name="note_back7">#A9AF7E</color>
+    <color name="note_back8">#A4BE7B</color>
+    <color name="note_back9">#9F8772</color>
+    <color name="note_back10">#CA955C</color>
+
+</resources>

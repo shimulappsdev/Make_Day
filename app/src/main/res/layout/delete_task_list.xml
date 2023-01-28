@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_7sdp"
+    android:layout_marginHorizontal="@dimen/_2sdp"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/deleteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_3sdp"
+        android:background="@color/lite_green"
+        >
+
+        <TextView
+            android:id="@+id/taskTitleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/days_one"
+            android:text="Task Title"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/orange"
+            android:includeFontPadding="false"
+            android:layout_margin="@dimen/_3sdp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/leftTime"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/leftTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="2:00 h"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/btn_back"
+            android:backgroundTint="@color/orange"
+            android:includeFontPadding="false"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/categoryTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Personal"
+            android:drawableLeft="@drawable/category"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTint="@color/white"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/taskTitleTV"/>
+
+        <TextView
+            android:id="@+id/priorityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="High"
+            android:drawableLeft="@drawable/priority"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/categoryTV"
+            app:layout_constraintTop_toBottomOf="@id/taskTitleTV"/>
+
+        <TextView
+            android:id="@+id/locationTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:drawableLeft="@drawable/location"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTint="@color/white"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto"
+            android:maxLines="1"
+            android:text="Location"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/priorityTV" />
+
+        <TextView
+            android:id="@+id/dateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="01/01/2022"
+            android:drawableLeft="@drawable/date"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTint="@color/white"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textSize="@dimen/_9ssp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationTV"
+            />
+
+        <TextView
+            android:id="@+id/startTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="08:30 PM"
+            android:drawableLeft="@drawable/time"
+            android:drawableTint="@color/white"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textSize="@dimen/_9ssp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@id/dateTV"
+            app:layout_constraintEnd_toStartOf="@id/hiPen"
+            app:layout_constraintTop_toBottomOf="@id/locationTV"
+            />
+
+        <TextView
+            android:id="@+id/hiPen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/days_one"
+            android:text="-"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@id/startTimeTV"
+            app:layout_constraintTop_toBottomOf="@id/locationTV"
+            app:layout_constraintBottom_toBottomOf="@id/startTimeTV"
+            />
+
+        <TextView
+            android:id="@+id/endTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:drawableLeft="@drawable/time"
+            android:drawableTint="@color/white"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="08:30 PM"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textSize="@dimen/_9ssp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@id/hiPen"
+            app:layout_constraintTop_toBottomOf="@id/locationTV"
+            />
+
+        <TextView
+            android:id="@+id/statusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:fontFamily="@font/roboto"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/white"
+            android:background="@drawable/status_back"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/leftTime"
+            app:layout_constraintBottom_toTopOf="@id/deleteBtn"/>
+
+        <ImageView
+            android:id="@+id/deleteBtn"
+            android:src="@drawable/delete"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="@dimen/_7sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusTV"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
