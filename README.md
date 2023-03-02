@@ -1,5 +1,5 @@
 # Make_Day
-<p align ="center" background-color coral padding padding-bottom: 25px>
+<p align ="center">
 <img src="https://user-images.githubusercontent.com/118614364/222343712-c235ad8f-726a-40d0-b8af-84a3c030beb9.png" width="250" height="480" />
 </p>
 
