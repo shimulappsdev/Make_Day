@@ -1,9 +1,9 @@
 # Make_Day
-<p align ="center">
+<p align ="left">
 <img src="https://user-images.githubusercontent.com/118614364/222343712-c235ad8f-726a-40d0-b8af-84a3c030beb9.png" width="270" height="500" />
 </p>
 
-<p align ="center">
+<p align ="right">
 <img src="https://user-images.githubusercontent.com/118614364/222343715-b3dbf26d-13de-4462-be41-e6347d3d2c3c.png" width="270" height="500" />
 </p>
 
